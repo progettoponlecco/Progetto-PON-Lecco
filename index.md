@@ -5,7 +5,7 @@ You can use the [editor on GitHub](https://github.com/progettoponlecco/Progetto-
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ![Image](https://i.imgur.com/yD7rcQt.png)
-Mappa attuale di Lecco creata con [tangrams.github.io](https://tangrams.github.io)
+Mappa attuale di Lecco creata con [tangrams.github.io](https://tangrams.github.io/tangram)
 
 ### Jekyll Themes
 
