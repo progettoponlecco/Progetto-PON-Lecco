@@ -1,0 +1,29 @@
+#map-container {
+  width: 648px;
+  height: 413px;
+  border: 1px solid black;
+  position: relative;
+}
+#map-container .location {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background: red;
+  cursor: pointer;
+}
+#map-container .location.active {
+  background: yellow;
+}
+#map-container .location#tucuman {
+  top: 337px;
+  left: 126px;
+}
+#map-container .location#buenosaires {
+  top: 350px;
+  left: 130px;
+}
+#map-container .location#paris {
+  top: 139px;
+  left: 264px;
+}
