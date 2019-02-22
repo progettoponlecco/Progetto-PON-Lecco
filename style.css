@@ -1,0 +1,40 @@
+.col-md-9 p {
+    padding-top: 30px;
+    font: 14px Courier New, Courier, monospace;
+
+}
+
+.col-md-3 h4 {
+    padding-top: 30px;
+    padding-right: 10px;
+    font: Courier New, Courier, monospace;
+    color:  #2778AA;
+    
+}
+
+.col-md-3 p {
+    padding-top: 30px;
+    font: 16px Courier New, Courier, monospace;
+}
+
+.tab-content {
+    padding-top: 20px;
+}
+
+#mapid{
+    height: 500px;
+}
+
+p#san-nicolo {
+    display: none;
+    font: 16px/1.5 Courier New, Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p#torre-viscontea {
+    display: none;
+    font: 16px/1.5 Courier New, Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+}

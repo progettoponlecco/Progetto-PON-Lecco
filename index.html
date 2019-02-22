@@ -1,25 +1,60 @@
-<!doctype html>
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="it">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+	    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
-    <div class="row">
-      <div class="column1">
-	<h3 class="footer">Le Fortificazioni di Lecco</h3>
-	<p class="under-footer">Progetto creato dall'istituto superiore Badoni in relazione al progetto PON Europeo per la creazione di contenuti digitali interattivi legati al territorio.</p>
-      </div>
-
-      <div class="column2">
-	<div>
-	  <p class="map-header">Clicca sui punti di interesse nella mappa per ottenere le descrizioni.</p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+      <div class="container">
+	<a class="navbar-brand" href="#">Home</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+	  <div class="navbar-nav">
+	    <a class="nav-item nav-link active" href="#">Mappe <span class="sr-only">(current)</span></a>
+	    <a class="nav-item nav-link" href="#">Altro</a>
+	    <a class="nav-item nav-link" href="#">About</a>
+	  </div>
 	</div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+	<div class="col-md-3">
+	  <h4>Le Fortificazioni di Lecco</h4>
+	  <p>Progetto creato dall'istituto superiore Badoni in relazione al progetto PON Europeo per la creazione di contenuti digitali interattivi legati al territorio.</p>
+	</div>
+	<div class="col-md-9">
+	  <p>Clicca sui punti di interesse della mappa per vederne la descrizione.</p>
+	  <ul class="nav nav-tabs" id="myTab" role="tablist">
+	    <li class="nav-item">
+	      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Centro</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Pescarenico</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Ponte</a>
+	    </li>
+	  </ul>
+	  <div class="tab-content" id="myTabContent">
+	    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+	      <div>
+		<div id="mapid"></div>
 
+<<<<<<< HEAD
+		<p id="san-nicolo">
+			Le prime notizie risalgono al XIII secolo (il primo documento scritto che ne parla risale al 1252), e venne con ogni probabilità costruita su precedenti resti di fortificazione della città. Al 23 agosto 1584 risale la data della traslazione della chiesa prepositurale da Castello (oggi rione della città) a Lecco, con decreto di san Carlo Borromeo la cui copia è custodita nell'archivio Plebano. La prima opera di ricostruzione della basilica iniziò nel 1596, e proseguì a fasi differenti fino al 1774, quando l'edificio venne dotato di una facciata neoclassica, con timpano triangolare e sei paraste ioniche. Nel XIX secolo si pensò ad un ampliamento sostanziale della chiesa. L'attuale aspetto fu progettato dall'architetto Giuseppe Bovara, che vi lavorò dal 1831 al 1862; al settembre 1930 risale la consacrazione del tempio per opera del cardinale. Il defonso Schuster proclamato beato nel 1996. La facciata venne invece terminata successivamente, nel 1881-83, contemporaneamente ai progetti di realizzazione del campanile neogotico (il precedente venne inglobato nel nuovo edificio). Eretto a fasi alterne sui resti di un antico bastione spagnolo circolare, fu inaugurato la notte di Natale del 1904. Dal 22 gennaio 1943 è basilica romana minore.</p>
+=======
 	<div id="map-container">
 	  <img class='map-lecco' src="https://i.imgur.com/LffhDDy.png"/>
 	  <div><p class="map-source">mappa creata con <a href="https://tangrams.github.io/tangram/">tangrams</a></p></div>
@@ -31,10 +66,61 @@
 	    La prima opera di ricostruzione della basilica iniziò nel 1596, e proseguì a fasi differenti fino al 1774, quando l'edificio venne dotato di una facciata neoclassica, con timpano triangolare e sei paraste ioniche. Nel XIX secolo si pensò ad un ampliamento sostanziale della chiesa. L'attuale aspetto fu progettato dall'architetto Giuseppe Bovara, che vi lavorò dal 1831 al 1862; al settembre 1930 risale la consacrazione del tempio per opera del cardinale Ildefonso Schuster proclamato beato nel 1996. La facciata venne invece terminata successivamente, nel 1881-83, contemporaneamente ai progetti di realizzazione del campanile neogotico (il precedente venne inglobato nel nuovo edificio). Eretto a fasi alterne sui resti di un antico bastione spagnolo circolare, fu inaugurato la notte di Natale del 1904.
 	    Dal 22 gennaio 1943 è basilica romana minore. </p>
 	</div>
+>>>>>>> ca6de9c17c96531f48249b9e1b312379d6ed8328
 
+		<p id="torre-viscontea">È una torre</p>
+
+		<script>
+		 
+		 var mymap = L.map('mapid').setView([45.852, 9.392], 15);
+		 
+		 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		     maxZoom: 18,
+		     id: 'mapbox.streets',
+		     accessToken: 'pk.eyJ1IjoicHJvZ2V0dG9wb25sZWNjbyIsImEiOiJjanNnMGx6OHEwN3lpNDlxZ2VwanQ0anc4In0.KZ7WwvtXTNeZrSG3RCNMNA'
+		 }).addTo(mymap);
+		 
+		 var san_nicolo = L.circle([45.8567, 9.389], {
+		     color: 'red',
+		     fillColor: '#f03',
+		     fillOpacity: 0.5,
+		     radius: 15
+		 }).addTo(mymap);
+
+		 var torre_viscontea = L.circle([45.8542792,9.3894318], {
+		     color: 'red',
+		     fillColor: '#f03',
+		     fillOpacity: 0.5,
+		     radius: 15
+		 }).addTo(mymap);
+
+		 
+		 san_nicolo.on('click', san_nicolo_onClick);
+		 torre_viscontea.on('click', torre_viscontea_onClick);
+		 
+		 function san_nicolo_onClick(e) {
+		     $('p#san-nicolo').toggle()
+		     $('p#torre-viscontea').hide()
+		 };
+		 function torre_viscontea_onClick(e) {
+		     $('p#torre-viscontea').toggle()
+		     $('p#san-nicolo').hide()
+		 }
+		 
+		</script>
+
+	      </div>
+	    </div>
+	  </div>
+	    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Sei sulla seconda mappa</div>
+	    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Sei sulla terza mappa</div>
+	    </div>
+	</div>
 
       </div>
-
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </body>
-    </html
+  </html>
