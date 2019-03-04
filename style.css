@@ -58,8 +58,6 @@ p#torre-viscontea {
 }
 
 
-
-
 .btn-default {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
 }
@@ -74,19 +72,6 @@ p#torre-viscontea {
     color: white;
 }
 
-.btn-default.btn-on.selected {
-    background-color: #7FDBFF;
-    color: white;
-}
-
-.btn-default.btn-off.selected {
-    background-color: #7FDBFF;
-    color: white;
-}
-
-
-
-
 #map-toggle-container {
     padding-bottom: 30px;
 }
@@ -96,6 +81,8 @@ p#torre-viscontea {
     height: auto;
     display: block;
     border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
