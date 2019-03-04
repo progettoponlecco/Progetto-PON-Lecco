@@ -3,31 +3,48 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
+
     <title>Fortificazioni a Lecco</title>
+    
+    <!--LeafletJS CDN-->
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+    <!--Bootstrap CDN-->
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>-->
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>-->
+    
+    <!--JS-->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--CSS-->
+    
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-	  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-	    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="crossorigin=""></script>
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
       <div class="container">
-	<a class="navbar-brand" href="#">Home</a>
+	<a class="navbar-brand" href="index.html">Home</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	  <span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 	  <div class="navbar-nav">
-	    <a class="nav-item nav-link active" href="#">Galleria<span class="sr-only">(current)</span></a>
+	    <a class="nav-item nav-link active" href="galleria/galleria.html">Galleria</a>
 	    <a class="nav-item nav-link" href="bibliografia/bibliografia.html">Bibliografia</a>
-	    <a class="nav-item nav-link" href="#">Crediti</a>
+	    <a class="nav-item nav-link" href="crediti/crediti.html">Crediti</a>
 	  </div>
 	</div>
       </div>
     </nav>
+    
     <div class="container">
       <div class="row">
 	<div class="col-md-3">
@@ -35,17 +52,16 @@
 	  <p>Progetto creato dall'istituto superiore Badoni in relazione al progetto PON Europeo per la creazione di contenuti digitali interattivi legati al territorio.</p>
 	</div>
 	<div class="col-md-9">
-	  <p>Clicca sui punti di interesse della mappa per vederne la descrizione.</p>
+	  <p id="spiegazione-mappa-interattiva">Clicca sui punti di interesse della mappa per vederne la descrizione.</p>
+	  <p id="spiegazione-mappa-antica">Premi il pulsante per vedere l'antica mappa di Lecco.</p>
 	  <ul class="nav nav-tabs" id="myTab" role="tablist">
 	    <li class="nav-item">
-	      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Centro</a>
+	      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Mappa Interattiva</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Pescarenico</a>
+	      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Antiche Fortificazioni</a>
 	    </li>
-	    <li class="nav-item">
-	      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Ponte</a>
-	    </li>
+
 	  </ul>
 	  <div class="tab-content" id="myTabContent">
 	    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -57,64 +73,38 @@
 
 		<p id="torre-viscontea">È una torre</p>
 
-		<script>
-		 
-		 var mymap = L.map('mapid').setView([45.852, 9.392], 15);
-		 
-		 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-		     maxZoom: 18,
-		     id: 'mapbox.streets',
-		     accessToken: 'pk.eyJ1IjoicHJvZ2V0dG9wb25sZWNjbyIsImEiOiJjanNnMGx6OHEwN3lpNDlxZ2VwanQ0anc4In0.KZ7WwvtXTNeZrSG3RCNMNA'
-		 }).addTo(mymap);
-		 
-		 var san_nicolo = L.circle([45.8567, 9.389], {
-		     color: 'red',
-		     fillColor: '#f03',
-		     fillOpacity: 0.5,
-		     radius: 15
-		 }).addTo(mymap);
-
-		 var torre_viscontea = L.circle([45.8542792,9.3894318], {
-		     color: 'red',
-		     fillColor: '#f03',
-		     fillOpacity: 0.5,
-		     radius: 15
-		 }).addTo(mymap);
-
-		 
-		 san_nicolo.on('click', san_nicolo_onClick);
-		 torre_viscontea.on('click', torre_viscontea_onClick);
-
-		 san_nicolo.on('click', auto_scroll);
-		 torre_viscontea.on('click', auto_scroll);
-
-		 function auto_scroll(e) {
-		     $("html, body").animate({ scrollTop: 600 }, "slow");
-		 }
-		 
-		 function san_nicolo_onClick(e) {
-		     $('p#san-nicolo').toggle()
-		     $('p#torre-viscontea').hide()
-		 };
-		 function torre_viscontea_onClick(e) {
-		     $('p#torre-viscontea').toggle()
-		     $('p#san-nicolo').hide()
-		 }
-		 
-		</script>
-
+		<!--Descrizioni Punti di Interesse-->
+		
 	      </div>
-	  </div>
-	    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Sei sulla seconda mappa</div>
-	    <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Sei sulla terza mappa</div>
 	    </div>
+	  
+	    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+	      <div class="container">
+		<div class="row">
+		  <div class="col-md-12" id="map-toggle-container">
+
+		    <!--Toggle-->
+
+		    <div class="btn-group btn-toggle" style="float:right"> 
+    		      <button class="btn btn-sm btn-default" id="on">antica</button>
+    		      <button class="btn btn-sm btn-default active" id="off">moderna</button>
+    		    </div>		      
+		  </div>
+
+		  <!--Immagini Mappe-->
+
+		  <div class="col-md-12">
+		    <img id="mappa-moderna" src="imgs/barrel.jpg" class="img-responsive" alt="Responsive image">
+		    <img id="mappa-antica" style="display:none" src="imgs/waves.jpg" class="img-responsive" alt="Responsive image">
+		  </div>
+		  
+		</div>
+	      </div>
+	      
+	    </div>
+	  </div>
 	</div>
       </div>
-
-      </div>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    </div>    
   </body>
   </html>
