@@ -23,6 +23,9 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
 * ### index.html
 ```
     ...
+
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     ...
+```
