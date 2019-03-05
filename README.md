@@ -63,23 +63,23 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
     
    * ##### Navbar
 
-    ```
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-        ...
-    </nav>
-    ```
+     ```
+     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+         ...
+     </nav>
+     ```
 
     Il tag `<nav>` serve per creare la barra di navigazione in alto, la cosiddetta [Navbar](https://getbootstrap.com/docs/3.3/components/#navbar).
     Questa può essere personalizzata con le diverse classi che si trovano nella documentazione.
     
    * ##### Grid system
 
-    ```
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-            ...
-    ```
+     ```
+     <div class="container">
+         <div class="row">
+             <div class="col-md-3">
+             ...
+     ```
     
     La classe __container__ è probabilmente la più importante nell'inserimento di contenuti nel sito.
     Questo perché introduce al sistema di griglie di Boostrap per rendere il sito più _responsive_.
@@ -87,28 +87,28 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
     
    * ##### Tabs
    
-   ```
-    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        ...
-    </div>
-   ```
+    ```
+     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+         ...
+     </div>
+    ```
    
    [Documentazione Tabs](https://getbootstrap.com/docs/3.3/components/#nav-tabs)
    
    * ##### Mappa
 
-    ```
-    <div id="mapid"></div>
-    ```
+     ```
+     <div id="mapid"></div>
+     ```
     
     Il tag `<div>` in cui è contenuta la mappa interattiva a cui si farà rimento nel file __main.js__
     
    * ##### Toggle
    
-   ```
-   <div class="btn-group btn-toggle" style="float:right"> 
-       ...
-   </div>
-   ```
+    ```
+    <div class="btn-group btn-toggle" style="float:right"> 
+        ...
+    </div>
+    ```
    
    Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
