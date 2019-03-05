@@ -12,6 +12,8 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
   * Creazione elementi front-end del sito
   * Sito web responsive per qualsiasi dispositivo
   
+    _Assicurarsi di usare sempre la versione 3 di Boostrap e non successive_
+ 
 * ### [LeafletJS](https://leafletjs.com)
   * Libreria JavaScript per poter visualizzare mappe interattive
   
