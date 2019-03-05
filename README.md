@@ -69,8 +69,8 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
      </nav>
      ```
 
-    Il tag `<nav>` serve per creare la barra di navigazione in alto, la cosiddetta [Navbar](https://getbootstrap.com/docs/3.3/components/#navbar).
-    Questa può essere personalizzata con le diverse classi che si trovano nella documentazione.
+     Il tag `<nav>` serve per creare la barra di navigazione in alto, la cosiddetta [Navbar](https://getbootstrap.com/docs/3.3/components/#navbar).
+     Questa può essere personalizzata con le diverse classi che si trovano nella documentazione.
     
    * ##### Grid system
 
@@ -81,9 +81,9 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
              ...
      ```
     
-    La classe __container__ è probabilmente la più importante nell'inserimento di contenuti nel sito.
-    Questo perché introduce al sistema di griglie di Boostrap per rendere il sito più _responsive_.
-    Ecco un [esempio](https://getbootstrap.com/docs/3.3/examples/non-responsive/) di sito non _responsive_ (è necessario passare al layout di uno smartphone per coglierne il senso) ed ecco la documentazione del [Grid system](https://getbootstrap.com/docs/4.0/layout/grid/) di Bootstrap
+     La classe __container__ è probabilmente la più importante nell'inserimento di contenuti nel sito.
+     Questo perché introduce al sistema di griglie di Boostrap per rendere il sito più _responsive_.
+     Ecco un [esempio](https://getbootstrap.com/docs/3.3/examples/non-responsive/) di sito non _responsive_ (è necessario passare al layout di uno smartphone per coglierne il senso) ed ecco la documentazione del [Grid system](https://getbootstrap.com/docs/4.0/layout/grid/) di Bootstrap
     
    * ##### Tabs
    
@@ -93,15 +93,15 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
      </div>
     ```
    
-   [Documentazione Tabs](https://getbootstrap.com/docs/3.3/components/#nav-tabs)
-   
+    [Documentazione Tabs](https://getbootstrap.com/docs/3.3/components/#nav-tabs)
+
    * ##### Mappa
 
      ```
      <div id="mapid"></div>
      ```
     
-    Il tag `<div>` in cui è contenuta la mappa interattiva a cui si farà rimento nel file __main.js__
+     Il tag `<div>` in cui è contenuta la mappa interattiva a cui si farà rimento nel file __main.js__
     
    * ##### Toggle
    
@@ -111,4 +111,4 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
     </div>
     ```
    
-   Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
+    Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
