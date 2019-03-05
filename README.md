@@ -112,3 +112,24 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
      ```
 
      Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
+
+
+* ### main.js
+
+  * ##### Mappa 
+  
+  ```
+  var mymap = L.map('mapid').setView([45.852, 9.392], 15);
+  var attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+    
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: attribution}).addTo(mymap);
+
+  ```
+   
+  Per creare la mappa interattiva Leaflet consente l'adozione di qualsiasi _tile-provider_ come MapBox, OSM, Stamen, ecc.
+  
+  In questo caso è stato adottato [OSM](https://www.openstreetmap.org/) sia perché non richiede nessun tipo di registrazione sia perché i [Termini di Utilizzo](https://operations.osmfoundation.org/policies/tiles/) per questo servizio sono molto meno restrittivi rispetto ad altri come MapBox dove non solo è richiesta la creazione di un account, ma dove si ha un limite di 50,000 richieste mensili oltre le quali non verrebbe più consentito l'utilizzo delle mappe se non con un cambio del piano tariffario.
+  
+  Uno strumento utile per poter vedere i vari _tile-providers_ e le varie anteprime delle mappe è [__leaflet-extras__](https://leaflet-extras.github.io/leaflet-providers/preview/)
+  
+  Nel caso si voglia ugualmente utilizzare MapBox, sia perché si pensa di poter stare ampiamente sotto le 50,000 richieste mensili sia perché lo si ritiene un servizio migliore, si può andare a controllare [__main.js__](https://github.com/progettoponlecco/progettoponlecco.github.io/blob/00b8695042261a36efd964db1ae52be135041175/main.js) prima del commit `MapBox-->OSM`
