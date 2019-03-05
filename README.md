@@ -87,13 +87,13 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
     
    * ##### Tabs
    
-    ```
-     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-         ...
-     </div>
-    ```
-   
-    [Documentazione Tabs](https://getbootstrap.com/docs/3.3/components/#nav-tabs)
+     ```
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          ...
+      </div>
+     ```
+
+     [Documentazione Tabs](https://getbootstrap.com/docs/3.3/components/#nav-tabs)
 
    * ##### Mappa
 
@@ -105,10 +105,10 @@ Per la creazione del sito, in aggiunta ad HTML, CSS e Javascript sono stati usat
     
    * ##### Toggle
    
-    ```
-    <div class="btn-group btn-toggle" style="float:right"> 
-        ...
-    </div>
-    ```
-   
-    Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
+     ```
+     <div class="btn-group btn-toggle" style="float:right"> 
+         ...
+     </div>
+     ```
+
+     Il bottone nella seconda tab si avvale della classi che si possono trovare in [Button Groups](https://getbootstrap.com/docs/3.3/components/#btn-groups)
