@@ -56,6 +56,7 @@ $(document).ready(function(){
 	}
 	
 	$('p#san-nicolo').toggle()
+	$('div#san-nicolo').toggle()
 	$('p#torre-viscontea').hide()
     }
     
@@ -70,6 +71,8 @@ $(document).ready(function(){
 	
 	$('p#torre-viscontea').toggle()
 	$('p#san-nicolo').hide()
+	$('div#san-nicolo').hide()
+	
     }
 
 
