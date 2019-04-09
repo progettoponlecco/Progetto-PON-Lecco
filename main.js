@@ -55,8 +55,8 @@ $(document).ready(function(){
 	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
 	}
 	
-	$('p#san-nicolo').toggle()
 	$('div#san-nicolo').toggle()
+	$('p#san-nicolo').toggle()
 	$('p#torre-viscontea').hide()
     }
     
@@ -72,6 +72,7 @@ $(document).ready(function(){
 	$('p#torre-viscontea').toggle()
 	$('p#san-nicolo').hide()
 	$('div#san-nicolo').hide()
+
 	
     }
 
