@@ -1,10 +1,10 @@
-.col-md-9 p#spiegazione-mappa-interattiva {
+p#spiegazione-mappa-interattiva {
     padding-top: 30px;
-    font: 14px Helvetica Neue,Helvetica,Arial,sans-serif;
+    font: 14px Courier New, Courier, monospace;
 
 }
 
-.col-md-9 p#spiegazione-mappa-antica {
+p#spiegazione-mappa-antica {
     display: none;
     padding-top: 30px;
     font: 14px Courier New, Courier, monospace;
@@ -13,15 +13,15 @@
 .col-md-3 h4 {
     padding-top: 30px;
     padding-right: 10px;
-    font: Courier New, Courier, monospace;
+    font: 25px Courier New, Courier, monospace;
     color:  #2778AA;
     
 }
 
 .col-md-3 p {
     padding-top: 30px;
-    font: 16px 1.5 Helvetica Neue,Helvetica,Arial,sans-serif; 
-}
+    font: 16px/1.5 Courier New, Courier, monospace; /*Helvetica Neue,Helvetica,Arial,sans-serif;*/
+} 
 
 .tab-content {
     padding-top: 20px;
@@ -32,11 +32,11 @@
 }
 
 #home-tab {
-    font: 13px Helvetica Neue,Helvetica,Arial,sans-serif;
+    font: 11px  Courier New, Courier, monospace;/*Helvetica Neue,Helvetica,Arial,sans-serif;*/
 }
 
 #profile-tab {
-    font: 13px Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font: 11px  Courier New, Courier, monospace;/*Helvetica Neue,Helvetica,Arial,sans-serif; */
 }
 
 #mapid{
@@ -78,6 +78,13 @@ p#quartiere-castello {
     margin-right: auto;
 }
 
+#on {
+    font: 14px Courier New, Courier, monospace;  
+}
+
+#off {
+    font: 14px Courier New, Courier, monospace;
+}
 .btn-default {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
 }
@@ -96,74 +103,43 @@ p#quartiere-castello {
     padding-bottom: 30px;
 }
 
-.img-responsive {
+img {
     max-width: 100%;
     height: auto;
     display: block;
-    border-radius: 25px;
+    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Bibliografia */
 
-/*HTML TOGGLE (ignorare)*/
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+.list-unstyled {
+    padding-top: 20px;     
 }
 
-.switch input { 
-  opacity: 0;
-  width: 0;
-  height: 0;
+.mr-3 {
+    padding-top: 5px;
 }
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+.mt-0 {
+    font: 22px Courier New, Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+p#biblio-descrizione {
+    font: 16px Courier New, Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
+/* Galleria */
+
+div#galleria {
+    padding-top: 30px;
 }
 
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+p#galleria {
+    font: 13px Courier New, Courier, monospace;
 }

@@ -24,14 +24,14 @@ $(document).ready(function(){
 	radius: 15
     }).addTo(mymap);
     
-    var ponte_azzone = L.circle([45.8454355,9.3946153], {
+    var ponte_azzone = L.circle([45.8458602,9.3954501], {
 	color: 'red',
 	fillColor: '#f03',
 	fillOpacity: 0.5,
 	radius: 15
     }).addTo(mymap);
     
-    var isola_viscontea = L.circle([45.8470374,9.3926259], {
+    var isola_viscontea = L.circle([45.8470752,9.3944982], {
 	color: 'red',
 	fillColor: '#f03',
 	fillOpacity: 0.5,
