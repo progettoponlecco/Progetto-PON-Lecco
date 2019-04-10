@@ -23,17 +23,43 @@ $(document).ready(function(){
 	fillOpacity: 0.5,
 	radius: 15
     }).addTo(mymap);
-
+    
+    var ponte_azzone = L.circle([45.8454355,9.3946153], {
+	color: 'red',
+	fillColor: '#f03',
+	fillOpacity: 0.5,
+	radius: 15
+    }).addTo(mymap);
+    
+    var isola_viscontea = L.circle([45.8470374,9.3926259], {
+	color: 'red',
+	fillColor: '#f03',
+	fillOpacity: 0.5,
+	radius: 15
+    }).addTo(mymap);
+    
+    var quartiere_castello = L.circle([45.8612,9.3968113], {
+	color: 'red',
+	fillColor: '#f03',
+	fillOpacity: 0.5,
+	radius: 15
+    }).addTo(mymap);
+    
     // Richiamo delle funzioni auto-scroll e _onClick sui punti di interesse
     
     san_nicolo.on('click', san_nicolo_onClick);            
-    torre_viscontea.on('click', torre_viscontea_onClick);  
+    torre_viscontea.on('click', torre_viscontea_onClick);
+    ponte_azzone.on('click', ponte_azzone_onClick);
+    isola_viscontea.on('click', isola_viscontea_onClick);
+    quartiere_castello.on('click', quartiere_castello_onClick);
+    
     
     san_nicolo.on('click', auto_scroll);                   
     torre_viscontea.on('click', auto_scroll);
-
-    // TODO: più punti di interesse
-
+    ponte_azzone.on('click', auto_scroll);    
+    isola_viscontea.on('click', auto_scroll);
+    quartiere_castello.on('click', auto_scroll);
+    
 
     //~~~~~~  Funzioni ~~~~~~~~~
 
@@ -46,34 +72,159 @@ $(document).ready(function(){
 
     // Apparizione/Scomparsa della descrizione dei punti di interesse
     
+    // San Nicolò
+    
     function san_nicolo_onClick(e) {
 	if(san_nicolo.options.color == 'red')
 	{
 	    san_nicolo.setStyle({color: 'green', fillColor: 'green'})
+        
 	    torre_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        ponte_azzone.setStyle({color: 'red', fillColor: '#f03'})
+        isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        quartiere_castello.setStyle({color: 'red', fillColor: '#f03'})
 	} else {
 	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
 	}
 	
 	$('div#san-nicolo').toggle()
 	$('p#san-nicolo').toggle()
+        
+    $('div#torre-viscontea').hide()
 	$('p#torre-viscontea').hide()
+        
+    $('div#ponte-azzone').hide()
+	$('p#ponte-azzone').hide()
+        
+    $('div#isola-viscontea').hide()
+	$('p#isola-viscontea').hide()
+        
+    $('div#quartiere-castello').hide()
+	$('p#quartiere-castello').hide()
     }
+    
+    // Torre Viscontea
     
     function torre_viscontea_onClick(e) {
 	if(torre_viscontea.options.color == 'red')
 	{
 	    torre_viscontea.setStyle({color: 'green', fillColor: 'green'})
+        
 	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
+        ponte_azzone.setStyle({color: 'red', fillColor: '#f03'})
+        isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        quartiere_castello.setStyle({color: 'red', fillColor: '#f03'})
 	} else {
 	    torre_viscontea.setStyle({color: 'red', fillColor: '#f03'})
 	}
-	
+        
+	$('div#torre-viscontea').toggle()
 	$('p#torre-viscontea').toggle()
-	$('p#san-nicolo').hide()
+    
 	$('div#san-nicolo').hide()
+	$('p#san-nicolo').hide()
+        
+    $('div#ponte-azzone').hide()
+	$('p#ponte-azzone').hide()
+        
+    $('div#isola-viscontea').hide()
+	$('p#isola-viscontea').hide()
+        
+    $('div#quartiere-castello').hide()
+	$('p#quartiere-castello').hide()
+    }
+    
+    // Ponte Azzone
+    
+    function ponte_azzone_onClick(e) {
+	if(ponte_azzone.options.color == 'red')
+	{
+	    ponte_azzone.setStyle({color: 'green', fillColor: 'green'})
+        
+	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
+        torre_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        quartiere_castello.setStyle({color: 'red', fillColor: '#f03'})
+	} else {
+	    ponte_azzone.setStyle({color: 'red', fillColor: '#f03'})
+	}
+        
+    $('div#ponte-azzone').toggle()
+	$('p#ponte-azzone').toggle()
+        
+	$('div#torre-viscontea').hide()
+	$('p#torre-viscontea').hide()
+    
+	$('div#san-nicolo').hide()
+	$('p#san-nicolo').hide()
+        
+    $('div#isola-viscontea').hide()
+	$('p#isola-viscontea').hide()
+        
+    $('div#quartiere-castello').hide()
+	$('p#quartiere-castello').hide()
+    }
 
-	
+    // Isola Viscontea
+    
+    function isola_viscontea_onClick(e) {
+	if(isola_viscontea.options.color == 'red')
+	{
+	    isola_viscontea.setStyle({color: 'green', fillColor: 'green'})
+        
+	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
+        torre_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        ponte_azzone.setStyle({color: 'red', fillColor: '#f03'})
+        quartiere_castello.setStyle({color: 'red', fillColor: '#f03'})
+	} else {
+	    isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+	}
+        
+    $('div#isola-viscontea').toggle()
+	$('p#isola-viscontea').toggle()
+        
+    $('div#ponte-azzone').hide()
+	$('p#ponte-azzone').hide()
+        
+	$('div#torre-viscontea').hide()
+	$('p#torre-viscontea').hide()
+    
+	$('div#san-nicolo').hide()
+	$('p#san-nicolo').hide()
+        
+    $('div#quartiere-castello').hide()
+	$('p#quartiere-castello').hide()
+    }
+    
+    // Quartiere Castello
+    
+    function quartiere_castello_onClick(e) {
+	if(quartiere_castello.options.color == 'red')
+	{
+	    quartiere_castello.setStyle({color: 'green', fillColor: 'green'})
+        
+	    san_nicolo.setStyle({color: 'red', fillColor: '#f03'})
+        torre_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+        ponte_azzone.setStyle({color: 'red', fillColor: '#f03'})
+        isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+	} else {
+	    isola_viscontea.setStyle({color: 'red', fillColor: '#f03'})
+	}
+        
+    $('div#quartiere-castello').toggle()
+	$('p#quartiere-castello').toggle()
+        
+    $('div#isola-viscontea').hide()
+	$('p#isola-viscontea').hide()
+        
+    $('div#ponte-azzone').hide()
+	$('p#ponte-azzone').hide()
+        
+	$('div#torre-viscontea').hide()
+	$('p#torre-viscontea').hide()
+    
+	$('div#san-nicolo').hide()
+	$('p#san-nicolo').hide()
     }
 
 
