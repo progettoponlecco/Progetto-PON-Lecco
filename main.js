@@ -24,7 +24,7 @@ $(document).ready(function(){
 	radius: 15
     }).addTo(mymap);
     
-    var ponte_azzone = L.circle([45.8458602,9.3954501], {
+    var ponte_azzone = L.circle([45.8474099,9.39274], {
 	color: 'red',
 	fillColor: '#f03',
 	fillOpacity: 0.5,

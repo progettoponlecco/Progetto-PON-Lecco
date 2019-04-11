@@ -140,6 +140,7 @@ div#galleria {
     padding-top: 30px;
 }
 
-p#galleria {
+p#img-caption {
+    padding-top: 20px;
     font: 13px Courier New, Courier, monospace;
 }
