@@ -1,0 +1,34 @@
+body {
+    font-family: Courier New, Courier, monospace;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.carousel-item img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-item video{
+    height: 100%;
+    object-fit: cover;
+}
+
+.jumbotron {
+     height: 55vh;
+     background-size: cover;
+     background-position: center;
+}
+
+
+#mapid{
+    height: 500px;
+    border-radius: 25px;
+}
+
+a {
+    color:  #B7D6EC;
+}

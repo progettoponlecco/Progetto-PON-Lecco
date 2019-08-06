@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Lecco</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/css_sheet.css">
+    
+    <!--LeafletJS CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"/>
+  </head>
+
+  <body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html" id="title">About Lecco</a>
+
+      <!--Right Button-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <!--Navbar Content-->
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	<ul class="navbar-nav">
+	  <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">Home</span></a>
+	  </li>
+	  <li class="nav-item">
+            <a class="nav-link" href="mappa.html">Mappa</a>
+	  </li>
+	  
+	  <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contenuti</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="stralcidistoria.html">Stralci di Storia</a>
+              <a class="dropdown-item" href="fortificazioni.html">Fortificazioni</a>
+              <a class="dropdown-item" href="cartografia.html">Cartografia</a>
+              <a class="dropdown-item" href="metallurgia.html">Metallurgia</a>
+            </div>
+	  </li>
+	  
+	  <li class="nav-item">
+            <a class="nav-link" href="galleria.html">Galleria</a>
+	  </li>
+	</ul>
+      </div>
+    </nav>
+    <!--End Navbar-->
+
+
+    <div class="container">
+      <div class="row">
+	<div class="col-sm-12 pt-3">
+	  <p class="text-center font-italic">Mappa Interattiva: Clicca sui Punti di Interesse</p>
+	</div>
+
+	<div class="col-sm-12 py-3">
+	  <div id="mapid">
+	    
+	    <!--Basilica San Nicolò-->
+	    <div class="modal fade" id="modalSanNicolo" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Basilica San Nicolò</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p> La basilica di San Nicolò è il principale luogo di culto cattolico di Lecco. Situata in posizione rialzata, la chiesa sorge sui resti dell'antica cinta muraria ed è sede del prevosto di Lecco. Venne dedicata a San Nicolò, patrono della città. Ad identificare la chiesa è l'altissimo campanile, che, con i suoi 96 metri di altezza, rappresenta una delle torri campanarie più alte d'Italia.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+
+	    <!--Torre Viscontea-->
+	    <div class="modal fade" id="modalTorreViscontea" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Torre Viscontea</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p> La basilica di San Nicolò è il principale luogo di culto cattolico di Lecco. Situata in posizione rialzata, la chiesa sorge sui resti dell'antica cinta muraria ed è sede del prevosto di Lecco. Venne dedicata a San Nicolò, patrono della città. Ad identificare la chiesa è l'altissimo campanile, che, con i suoi 96 metri di altezza, rappresenta una delle torri campanarie più alte d'Italia.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+
+	    <!--Valle Mura-->
+	    <div class="modal fade" id="modalValleMura" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Vallo delle Mura</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p>Il vallo delle mura è quanto resta della cinta muraria che Visconti fece costruire nel 1336. Le mura inglobavano anche il castello a lago il cui vicino vicolo della Torre era la via d'accesso al castello tramite la Porta di Milano.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+
+	    <!--Zona Castello-->
+	    <div class="modal fade" id="modalZonaCastello" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Quartiere di Castello</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p>Il castrum (il castello dell’ Arcivescovo), venne costruito all'inizio del X secolo ed era situato nell' attuale rione di Castello. Essendo elevato rispetto al resto della città, il castello non aveva bisogno di motte per la protezione, e fungeva da centro militare e religioso per tutto il territorio, che al tempo, nel Medioevo, comprendeva tutta l’area tra i monti e il lago.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+
+
+	    <!--Isola Viscontea-->
+	    <div class="modal fade" id="modalIsolaViscontea" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Isola Viscontea</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p>L'isola è costituita da un edificio dominato da una torre circolare e da una zona a verde, alberata. Un tempo l'isola venne utilizzata come fortino di difesa e come presidio militare.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    
+
+
+	    <!--Ponte Azzone Visconti-->
+	    <div class="modal fade" id="modalPonteAzzoneVisconti" tabindex="-1" role="dialog">
+	      <div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+		  <div class="modal-header">
+		    <h5 class="modal-title">Ponte Azzone Visconti</h5>
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		      <span aria-hidden="true">&times;</span>
+		    </button>
+		  </div>
+		  <div class="modal-body">
+		    <p>Azzone Visconti conquista il territorio di Lecco nel 1336, fece costruire il ponte che oggi viene chiamato "Ponte Vecchio", i lavori terminarono nel 1338. Il Ponte venne progettato per poter collegare il territorio Lecco a Milano e come Fortezza Galleggiante con lo scopo di guardia del fiume Adda grazie a delle Torri Fortificate. Il Ponte presenta un passaggio Levatoio con dieci arcate, mentre al centro venne collocata la Cappelletta Votiva.</p>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	    <!--Fine Descrizioni-->
+	    
+	  </div>
+	</div>
+      </div>
+    </div>
+
+    <!--Contatti-->
+    <footer class="container bg-dark pt-4" style="color:white">
+      <div class="row">
+	<div class="col-sm-6">
+	  <h5 class="mx-3">CONTATTI</h5>
+	  <p class="mx-3 pb-3">I.I.S. A. Badoni<br>
+	    Via Rivolta 10 - 23900 Lecco<br>
+	    Tel 0341 365339 - Fax 0341 286589<br>
+	    E-mail <a href="mailto:lcis00900x@istruzione.it">lcis00900x@istruzione.it</a><br>
+	    PEC <a href="mailto:lcis00900x@istruzione.it">lcis00900x@pec.istruzione.it</a><br>
+	</div>
+	
+	<div class="col-sm-4">
+	  <h5 class="mx-3">CONTENUTI</h5>
+	  <ul class="list-unstyled mx-3">
+	    <li><a href="./stralcidistoria.html">Stralci di Storia</a></li>
+	    <li><a href="./fortificazioni.html">Fortificazioni</a></li>
+	    <li><a href="./cartografia.html">Cartografia</a></li>
+	    <li><a href="./metallurgia.html">Metallurgia</a></li>
+	  </ul>
+	</div>
+	
+	<div class="col-sm-2">
+	  <h5 class="mx-3">ALTRO</h5>
+	  <ul class="list-unstyled mx-3">
+	    <li><a href="./mappa.html">Mappa</a></li>
+	    <li><a href="./galleria.html">Galleria</a></li>
+	    <li><a href="./crediti.html">Crediti</a></li>
+	  </ul>
+	</div>
+      </div>
+      <div class="row">
+	<div class="col-sm-12">
+	  <p class="text-center pt-2">© 2019 Copyright:<a href="https://www.iisbadoni.gov.it/"> IIS A. Badoni</a></p>
+          <p class="text-center" style="font-size: 10px;">Tutti i contenuti sono coperti da copyright.</p>
+	</div>
+      </div>
+    </footer>
+    
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <script src="./js/main.js"></script>    
+  </body>
+  </html>
